@@ -1,24 +1,46 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import HomeTemplate from "./containers/HomeTemplate";
+import HomePage from "./containers/HomeTemplate/HomePage";
+import About from "./containers/HomeTemplate/AboutPage";
+import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
+import AdminTemplate from "./containers/AdminTemplate";
+import DashboardPage from "./containers/AdminTemplate/DashboardPage";
+import AddUserPage from "./containers/AdminTemplate/AddUserPage";
+import AddMoviePage from "./containers/AdminTemplate/AddMoviePage";
+import PageNotFound from "./containers/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* HomeTemplate */}
+        <Route path="" element={<HomeTemplate />}>
+          {/* HomePage */}
+          <Route path="" element={<HomePage />} />
+          {/* AboutPage */}
+          <Route path="about" element={<About />} />
+          {/* ListMoviePage */}
+          <Route path="list-movie" element={<ListMoviePage />} />
+        </Route>
+
+        {/* Redirect to admin/dashboard */}
+        <Route
+          path="admin"
+          element={<Navigate replace to="/admin/dashboard" />}
+        />
+
+        {/* AdminTemplate */}
+        <Route path="admin" element={<AdminTemplate />}>
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="add-user" element={<AddUserPage />} />
+          <Route path="add-movie" element={<AddMoviePage />} />
+        </Route>
+
+        {/* PageNotFound */}
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
