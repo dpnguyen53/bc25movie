@@ -9,6 +9,7 @@ import DashboardPage from "./containers/AdminTemplate/DashboardPage";
 import AddUserPage from "./containers/AdminTemplate/AddUserPage";
 import AddMoviePage from "./containers/AdminTemplate/AddMoviePage";
 import PageNotFound from "./containers/PageNotFound";
+import HooksPage from "./containers/HomeTemplate/HooksPage";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="about" element={<About />} />
           {/* ListMoviePage */}
           <Route path="list-movie" element={<ListMoviePage />} />
+          {/* HooksPage */}
+          <Route path="hooks" element={<HooksPage />} />
         </Route>
 
         {/* Redirect to admin/dashboard */}

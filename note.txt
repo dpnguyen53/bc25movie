@@ -5,6 +5,7 @@
 
 ===== Buổi 11 ======
 * Middleware Async Action
+    - redux thunk || redux saga
 * Hooks
 
 
