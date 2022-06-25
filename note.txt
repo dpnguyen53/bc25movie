@@ -8,6 +8,14 @@
     - redux thunk || redux saga
 * Hooks
 
+===== Buổi 12 ======
+* Detail Movie
+* Get Params From URL
+* HOC (Higher order component)
+
+* Auth
+* Guard Routing Admin
+
 
 
 

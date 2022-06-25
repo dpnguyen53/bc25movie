@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Child from "./child";
 import Cart from "./cart";
+import DemoUseReducer from "./demoUseReducer";
 
 export default function HooksPage() {
   const [number, setNumber] = useState(0);
@@ -61,6 +62,8 @@ export default function HooksPage() {
       <Child renderNoti={renderNotiCallback} />
       <hr />
       <Cart listCart={listCartMemo} />
+      <hr />
+      <DemoUseReducer />
     </div>
   );
 }
