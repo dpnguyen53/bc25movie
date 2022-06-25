@@ -61,6 +61,16 @@ export default class Navbar extends Component {
                 Hooks
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "my-active nav-link" : "nav-link"
+                }
+                to="/hoc"
+              >
+                Hoc
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

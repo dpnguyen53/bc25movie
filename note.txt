@@ -9,9 +9,10 @@
 * Hooks
 
 ===== Buổi 12 ======
+* HOC (Higher order component)
 * Detail Movie
 * Get Params From URL
-* HOC (Higher order component)
+
 
 * Auth
 * Guard Routing Admin

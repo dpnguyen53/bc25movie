@@ -10,6 +10,8 @@ import AddUserPage from "./containers/AdminTemplate/AddUserPage";
 import AddMoviePage from "./containers/AdminTemplate/AddMoviePage";
 import PageNotFound from "./containers/PageNotFound";
 import HooksPage from "./containers/HomeTemplate/HooksPage";
+import HocPage from "./containers/HomeTemplate/HocPage";
+import DetailMovie from "./containers/HomeTemplate/DetailMovie";
 
 function App() {
   return (
@@ -25,6 +27,10 @@ function App() {
           <Route path="list-movie" element={<ListMoviePage />} />
           {/* HooksPage */}
           <Route path="hooks" element={<HooksPage />} />
+          {/* HocPage */}
+          <Route path="hoc" element={<HocPage />} />
+          {/* Detail Movie */}
+          <Route path="/detail/:id" element={<DetailMovie />} />
         </Route>
 
         {/* Redirect to admin/dashboard */}
