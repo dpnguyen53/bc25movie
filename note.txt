@@ -13,9 +13,10 @@
 * Detail Movie
 * Get Params From URL
 
-
+===== Buổi 13 ======
 * Auth
 * Guard Routing Admin
+* Refactor code api
 
 
 

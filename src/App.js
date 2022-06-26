@@ -12,6 +12,7 @@ import PageNotFound from "./containers/PageNotFound";
 import HooksPage from "./containers/HomeTemplate/HooksPage";
 import HocPage from "./containers/HomeTemplate/HocPage";
 import DetailMovie from "./containers/HomeTemplate/DetailMovie";
+import AuthPage from "./containers/AdminTemplate/AuthPage";
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
           <Route path="add-user" element={<AddUserPage />} />
           <Route path="add-movie" element={<AddMoviePage />} />
         </Route>
+
+        {/* AuthPage */}
+        <Route path="auth" element={<AuthPage />} />
 
         {/* PageNotFound */}
         <Route path="*" element={<PageNotFound />} />

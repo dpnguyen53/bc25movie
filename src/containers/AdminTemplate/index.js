@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import { Outlet } from "react-router-dom";
+import React from "react";
+import { Outlet, Navigate } from "react-router-dom";
 
-export default class AdminTemplate extends Component {
-  render() {
-    return (
-      <>
-        <div>AdminTemplate</div>
-        <Outlet />
-      </>
-    );
-  }
+export default function AdminTemplate() {
+  if (!localStorage.getItem("UserAdmin"))
+    return <Navigate replace to="/auth" />;
+
+  return (
+    <>
+      <div>Navbar Admin</div>
+      <Outlet />
+    </>
+  );
 }
