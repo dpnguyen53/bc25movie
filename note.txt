@@ -18,6 +18,17 @@
 * Guard Routing Admin
 * Refactor code api
 
+===== Buổi 14 ======
+* Add User
+* Refactor Routing
+* Lazy load page
+
+* Material UI
+* Styledd Component
+* alias
+* scss
+
+
 
 
 
