@@ -23,10 +23,17 @@
 * Refactor Routing
 * Lazy load page
 
+
+===== Buổi 15 ======
 * Material UI
-* Styledd Component
-* alias
+* Styled Component (JSS)
 * scss
+* alias
+* Deploy
+  - Deploy tay
+    + Hosting
+  - Deploy vercel
+
 
 
 

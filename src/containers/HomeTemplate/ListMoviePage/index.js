@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Movie from "./Movie";
 import { connect } from "react-redux";
 import { actFetchData } from "./reducer/actions";
+import Loader from "components/Loader";
 
 class ListMoviePage extends Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class ListMoviePage extends Component {
 
   renderListMovie = () => {
     const { loading, data } = this.props;
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <Loader />;
     return data?.map((movie) => <Movie key={movie.maPhim} movie={movie} />);
   };
 
